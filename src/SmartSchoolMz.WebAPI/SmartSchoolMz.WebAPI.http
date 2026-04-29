@@ -1,0 +1,6 @@
+@SmartSchoolMz.WebAPI_HostAddress = http://localhost:5286
+
+GET {{SmartSchoolMz.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
