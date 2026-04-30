@@ -1,0 +1,11 @@
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\bin\Debug\net9.0\SmartSchoolMz.Domain.deps.json
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\bin\Debug\net9.0\SmartSchoolMz.Domain.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\bin\Debug\net9.0\SmartSchoolMz.Domain.pdb
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.AssemblyInfoInputs.cache
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.AssemblyInfo.cs
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.csproj.CoreCompileInputs.cache
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\refint\SmartSchoolMz.Domain.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.pdb
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\ref\SmartSchoolMz.Domain.dll

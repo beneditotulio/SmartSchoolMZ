@@ -1,0 +1,15 @@
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.csproj.AssemblyReference.cache
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.AssemblyInfoInputs.cache
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.AssemblyInfo.cs
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.csproj.CoreCompileInputs.cache
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\bin\Debug\net9.0\SmartSchoolMz.Application.deps.json
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\bin\Debug\net9.0\SmartSchoolMz.Application.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\bin\Debug\net9.0\SmartSchoolMz.Application.pdb
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\bin\Debug\net9.0\SmartSchoolMz.Domain.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\bin\Debug\net9.0\SmartSchoolMz.Domain.pdb
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSch.9893319D.Up2Date
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\refint\SmartSchoolMz.Application.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.pdb
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\ref\SmartSchoolMz.Application.dll
