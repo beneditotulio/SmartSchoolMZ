@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SmartSchoolMz.Domain.Entities;
 
 namespace SmartSchoolMz.Infrastructure.Persistence;
 
@@ -39,6 +40,31 @@ public static class DbInitializer
             };
             await userManager.CreateAsync(adminUser, "Admin123!");
             await userManager.AddToRoleAsync(adminUser, "Admin");
+        }
+
+        // Seed Year
+        if (!context.AnosLectivos.Any())
+        {
+            var ano = new AnoLetivo
+            {
+                Ano = DateTime.Now.Year,
+                Activo = true,
+                DataInicio = new DateTime(DateTime.Now.Year, 1, 1),
+                DataFim = new DateTime(DateTime.Now.Year, 12, 31)
+            };
+            context.AnosLectivos.Add(ano);
+            await context.SaveChangesAsync();
+        }
+
+        // Seed Classes
+        if (!context.Classes.Any())
+        {
+            context.Classes.AddRange(
+                new Classe { Nome = "10ª Classe", Nivel = "Secundário", ValorMensalidade = 1500 },
+                new Classe { Nome = "11ª Classe", Nivel = "Secundário", ValorMensalidade = 2000 },
+                new Classe { Nome = "12ª Classe", Nivel = "Secundário", ValorMensalidade = 2500 }
+            );
+            await context.SaveChangesAsync();
         }
     }
 }

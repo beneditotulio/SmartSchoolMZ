@@ -1,0 +1,31 @@
+@page
+@model SmartSchoolMz.Web.Pages.Matriculas.CreateModel
+@{
+    ViewData["Title"] = "Nova Matrícula";
+}
+
+<h1>Efetuar Nova Matrícula</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Input.AlunoId" class="form-label">Aluno</label>
+                <select asp-for="Input.AlunoId" class="form-select" asp-items="Model.Alunos"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.TurmaId" class="form-label">Turma</label>
+                <select asp-for="Input.TurmaId" class="form-select" asp-items="Model.Turmas"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.AnoLetivoId" class="form-label">Ano Letivo</label>
+                <select asp-for="Input.AnoLetivoId" class="form-select" asp-items="Model.AnosLetivos"></select>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Matricular</button>
+                <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

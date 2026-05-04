@@ -1,0 +1,55 @@
+@page "{id:guid}"
+@model SmartSchoolMz.Web.Pages.Processos.PagamentoModel
+@{
+    ViewData["Title"] = "Registar Pagamento";
+}
+
+<h1>Registar Pagamento</h1>
+<h4>Matrícula de: @Model.Matricula?.AlunoNome</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="Input.MatriculaId" />
+            <div class="mb-3">
+                <label asp-for="Input.Mes" class="form-label">Mês</label>
+                <select asp-for="Input.Mes" class="form-select">
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro">Outubro</option>
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Ano" class="form-label">Ano</label>
+                <input asp-for="Input.Ano" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.ValorPago" class="form-label">Valor a Pagar</label>
+                <input asp-for="Input.ValorPago" class="form-control" />
+                <div class="form-text text-info">O estado será atualizado automaticamente se o valor for igual ou superior ao esperado.</div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Metodo" class="form-label">Método de Pagamento</label>
+                <select asp-for="Input.Metodo" class="form-select" asp-items="Html.GetEnumSelectList<SmartSchoolMz.Domain.Enums.MetodoPagamento>()"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Referencia" class="form-label">Referência / Transação</label>
+                <input asp-for="Input.Referencia" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">Registar Pagamento</button>
+                <a asp-page="/Matriculas/Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

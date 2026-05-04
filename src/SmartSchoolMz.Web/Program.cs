@@ -1,4 +1,5 @@
 using SmartSchoolMz.Infrastructure;
+using SmartSchoolMz.Infrastructure.Persistence;
 using SmartSchoolMz.Application;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,12 @@ builder.Services.AddInfrastructureWeb(builder.Configuration);
 builder.Services.AddApplication();
 
 var app = builder.Build();
+
+// Seed data
+using (var scope = app.Services.CreateScope())
+{
+    await DbInitializer.Initialize(scope.ServiceProvider);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

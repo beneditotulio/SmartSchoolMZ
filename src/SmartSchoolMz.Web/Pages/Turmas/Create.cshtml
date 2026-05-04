@@ -1,0 +1,31 @@
+@page
+@model SmartSchoolMz.Web.Pages.Turmas.CreateModel
+@{
+    ViewData["Title"] = "Nova Turma";
+}
+
+<h1>Criar Nova Turma</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Input.Nome" class="form-label">Nome da Turma (ex: A, B)</label>
+                <input asp-for="Input.Nome" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.ClasseId" class="form-label">Classe</label>
+                <select asp-for="Input.ClasseId" class="form-select" asp-items="Model.Classes"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.AnoLetivoId" class="form-label">Ano Letivo</label>
+                <select asp-for="Input.AnoLetivoId" class="form-select" asp-items="Model.AnosLetivos"></select>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

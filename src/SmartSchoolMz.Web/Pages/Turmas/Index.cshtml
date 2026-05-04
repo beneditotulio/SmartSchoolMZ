@@ -1,0 +1,39 @@
+@page
+@model SmartSchoolMz.Web.Pages.Turmas.IndexModel
+@{
+    ViewData["Title"] = "Gestão de Turmas";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Turmas</h1>
+    <a asp-page="./Create" class="btn btn-primary">Nova Turma</a>
+</div>
+
+<div class="card shadow">
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Classe</th>
+                    <th>Ano Letivo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var t in Model.Turmas)
+                {
+                    <tr>
+                        <td>@t.Nome</td>
+                        <td>@t.ClasseNome</td>
+                        <td>@t.Ano</td>
+                        <td>
+                            <a asp-page="./Details" asp-route-id="@t.Id" class="btn btn-sm btn-info">Detalhes</a>
+                            <a asp-page="./Edit" asp-route-id="@t.Id" class="btn btn-sm btn-warning">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
