@@ -1,0 +1,53 @@
+@page
+@model SmartSchoolMz.Web.Pages.Matriculas.IndexModel
+@{
+    ViewData["Title"] = "Gestão de Matrículas";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Matrículas</h1>
+    <a asp-page="./Create" class="btn btn-primary">Nova Matrícula</a>
+</div>
+
+<div class="card shadow">
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Aluno</th>
+                    <th>Turma</th>
+                    <th>Ano Letivo</th>
+                    <th>Estado</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var m in Model.Matriculas)
+                {
+                    <tr>
+                        <td>@m.DataMatricula.ToString("dd/MM/yyyy")</td>
+                        <td>@m.AlunoNome</td>
+                        <td>@m.TurmaNome</td>
+                        <td>@m.Ano</td>
+                        <td>
+                            <span class="badge bg-info">@m.Estado</span>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    Processar
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-page="/Processos/LançarNota" asp-route-id="@m.Id">Lançar Nota</a></li>
+                                    <li><a class="dropdown-item" asp-page="/Processos/Frequencia" asp-route-id="@m.Id">Registar Presença</a></li>
+                                    <li><a class="dropdown-item" asp-page="/Processos/Pagamento" asp-route-id="@m.Id">Registar Pagamento</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

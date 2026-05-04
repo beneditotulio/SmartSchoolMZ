@@ -14,7 +14,7 @@ namespace SmartSchoolMz.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructureBase(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
@@ -23,6 +23,12 @@ public static class DependencyInjection
                 b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        return services;
+    }
+
+    public static IServiceCollection AddInfrastructureApi(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddInfrastructureBase(configuration);
         services.AddScoped<ITokenService, TokenService>();
 
         services.AddIdentityCore<IdentityUser>(options =>
@@ -51,6 +57,30 @@ public static class DependencyInjection
                     ValidateLifetime = true
                 };
             });
+
+        return services;
+    }
+
+    public static IServiceCollection AddInfrastructureWeb(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddInfrastructureBase(configuration);
+
+        services.AddIdentity<IdentityUser, IdentityRole>(options =>
+        {
+            options.Password.RequireDigit = false;
+            options.Password.RequiredLength = 6;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireLowercase = false;
+        })
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
+
+        services.ConfigureApplicationCookie(options =>
+        {
+            options.LoginPath = "/Account/Login";
+            options.AccessDeniedPath = "/Account/AccessDenied";
+        });
 
         return services;
     }

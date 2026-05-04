@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartSchoolMz.Domain\SmartSchoolMz.Domain.csproj" />
+    <ProjectReference Include="..\SmartSchoolMz.Application\SmartSchoolMz.Application.csproj" />
+    <ProjectReference Include="..\SmartSchoolMz.Infrastructure\SmartSchoolMz.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

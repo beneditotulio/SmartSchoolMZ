@@ -1,0 +1,62 @@
+@page
+@model SmartSchoolMz.Web.Pages.Alunos.CreateModel
+@{
+    ViewData["Title"] = "Novo Aluno";
+}
+
+<h1>Cadastrar Novo Aluno</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Input.NomeCompleto" class="form-label">Nome Completo</label>
+                <input asp-for="Input.NomeCompleto" class="form-control" />
+                <span asp-validation-for="Input.NomeCompleto" class="text-danger"></span>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label asp-for="Input.DataNascimento" class="form-label">Data de Nascimento</label>
+                    <input asp-for="Input.DataNascimento" type="date" class="form-control" />
+                </div>
+                <div class="col">
+                    <label asp-for="Input.Sexo" class="form-label">Sexo</label>
+                    <select asp-for="Input.Sexo" class="form-select" asp-items="Html.GetEnumSelectList<SmartSchoolMz.Domain.Enums.Sexo>()"></select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label asp-for="Input.DocumentoIdentificacao" class="form-label">Documento ID</label>
+                    <input asp-for="Input.DocumentoIdentificacao" class="form-control" />
+                </div>
+                <div class="col">
+                    <label asp-for="Input.NumeroMatricula" class="form-label">Nº Matrícula</label>
+                    <input asp-for="Input.NumeroMatricula" class="form-control" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Morada" class="form-label">Morada</label>
+                <input asp-for="Input.Morada" class="form-control" />
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label asp-for="Input.Contacto" class="form-label">Contacto</label>
+                    <input asp-for="Input.Contacto" class="form-control" />
+                </div>
+                <div class="col">
+                    <label asp-for="Input.Email" class="form-label">Email</label>
+                    <input asp-for="Input.Email" type="email" class="form-control" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

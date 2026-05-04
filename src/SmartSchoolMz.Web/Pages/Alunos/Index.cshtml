@@ -1,0 +1,47 @@
+@page
+@model SmartSchoolMz.Web.Pages.Alunos.IndexModel
+@{
+    ViewData["Title"] = "Gestão de Alunos";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Alunos</h1>
+    <a asp-page="./Create" class="btn btn-primary">Novo Aluno</a>
+</div>
+
+<div class="card shadow">
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Contacto</th>
+                    <th>Estado</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var aluno in Model.Alunos)
+                {
+                    <tr>
+                        <td>@aluno.NumeroMatricula</td>
+                        <td>@aluno.NomeCompleto</td>
+                        <td>@aluno.Sexo</td>
+                        <td>@aluno.Contacto</td>
+                        <td>
+                            <span class="badge @(aluno.Activo ? "bg-success" : "bg-danger")">
+                                @(aluno.Activo ? "Ativo" : "Inativo")
+                            </span>
+                        </td>
+                        <td>
+                            <a asp-page="./Details" asp-route-id="@aluno.Id" class="btn btn-sm btn-info">Detalhes</a>
+                            <a asp-page="./Edit" asp-route-id="@aluno.Id" class="btn btn-sm btn-warning">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
