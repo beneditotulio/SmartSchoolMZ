@@ -161,3 +161,4 @@ C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.WebAPI\
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.WebAPI\obj\Debug\net9.0\SmartSchoolMz.WebAPI.pdb
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.WebAPI\obj\Debug\net9.0\SmartSchoolMz.WebAPI.genruntimeconfig.cache
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.WebAPI\obj\Debug\net9.0\ref\SmartSchoolMz.WebAPI.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.WebAPI\obj\Debug\net9.0\SmartSchoolMz.WebAPI.sourcelink.json

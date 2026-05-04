@@ -13,3 +13,4 @@ C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Applica
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\refint\SmartSchoolMz.Application.dll
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.pdb
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\ref\SmartSchoolMz.Application.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Application\obj\Debug\net9.0\SmartSchoolMz.Application.sourcelink.json

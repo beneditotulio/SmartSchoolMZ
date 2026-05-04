@@ -17,3 +17,4 @@ C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Infrast
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Infrastructure\obj\Debug\net9.0\SmartSchoolMz.Infrastructure.pdb
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Infrastructure\obj\Debug\net9.0\SmartSchoolMz.Infrastructure.genruntimeconfig.cache
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Infrastructure\obj\Debug\net9.0\ref\SmartSchoolMz.Infrastructure.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Infrastructure\obj\Debug\net9.0\SmartSchoolMz.Infrastructure.sourcelink.json

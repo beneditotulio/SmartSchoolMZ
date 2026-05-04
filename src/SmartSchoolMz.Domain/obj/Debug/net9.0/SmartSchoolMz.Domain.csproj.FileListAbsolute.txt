@@ -9,3 +9,4 @@ C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\refint\SmartSchoolMz.Domain.dll
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.pdb
 C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\ref\SmartSchoolMz.Domain.dll
+C:\Users\tulio.benedito\Documents\GitHub\SmartSchoolMZ\src\SmartSchoolMz.Domain\obj\Debug\net9.0\SmartSchoolMz.Domain.sourcelink.json
