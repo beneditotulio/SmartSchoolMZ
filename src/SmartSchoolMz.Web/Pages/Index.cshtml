@@ -4,63 +4,123 @@
     ViewData["Title"] = "Dashboard";
 }
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="display-4">Bem-vindo ao SmartSchoolMz</h1>
-            <p class="lead">Sistema Integrado de Gestão Escolar</p>
-            <hr />
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h1 class="page-title">
+                <i class="fas fa-chart-line me-3" style="color: var(--primary-color);"></i>
+                Dashboard SmartSchoolMz
+            </h1>
+            <p class="page-subtitle mb-0">
+                Sistema Integrado de Gestão Escolar - Bem-vindo!
+            </p>
         </div>
     </div>
+</div>
 
-    <div class="row mt-4">
-        <div class="col-md-3">
-            <div class="card bg-primary text-white mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Alunos</h5>
-                    <p class="card-text">Gerir cadastros de alunos.</p>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" asp-page="/Alunos/Index">Ver Lista</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);">
+                <div class="card-icon">
+                    <i class="fas fa-user-graduate text-white"></i>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card bg-success text-white mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Matrículas</h5>
-                    <p class="card-text">Vínculos académicos ativos.</p>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" asp-page="/Matriculas/Index">Ver Lista</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                </div>
+            <div class="card-body">
+                <h5 class="card-title">Alunos</h5>
+                <p class="card-text">Gestão de cadastros de alunos</p>
+                <a asp-page="/Alunos/Index" class="btn btn-primary-custom text-white">
+                    <i class="fas fa-eye me-2"></i>Ver Alunos
+                </a>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card bg-warning text-dark mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Pagamentos</h5>
-                    <p class="card-text">Controlo de mensalidades.</p>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-dark stretched-link" asp-page="/Matriculas/Index">Processar</a>
-                    <div class="small text-dark"><i class="fas fa-angle-right"></i></div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%);">
+                <div class="card-icon">
+                    <i class="fas fa-door-open text-white"></i>
                 </div>
             </div>
+            <div class="card-body">
+                <h5 class="card-title">Turmas</h5>
+                <p class="card-text">Gestão de salas e turmas</p>
+                <a asp-page="/Turmas/Index" class="btn" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%); color: white; border: none; border-radius: 12px; padding: 12px 28px; font-weight: 600;">
+                    <i class="fas fa-eye me-2"></i>Ver Turmas
+                </a>
+            </div>
         </div>
-        <div class="col-md-3">
-            <div class="card bg-danger text-white mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Turmas</h5>
-                    <p class="card-text">Gestão de salas e anos.</p>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%);">
+                <div class="card-icon">
+                    <i class="fas fa-clipboard-list text-white"></i>
                 </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" asp-page="/Turmas/Index">Ver Lista</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Matrículas</h5>
+                <p class="card-text">Vínculos académicos ativos</p>
+                <a asp-page="/Matriculas/Index" class="btn" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%); color: #1d3557; border: none; border-radius: 12px; padding: 12px 28px; font-weight: 600;">
+                    <i class="fas fa-eye me-2"></i>Ver Matrículas
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ef476f 0%, #d00000 100%);">
+                <div class="card-icon">
+                    <i class="fas fa-money-bill-wave text-white"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Pagamentos</h5>
+                <p class="card-text">Controlo de mensalidades</p>
+                <a asp-page="/Matriculas/Index" class="btn" style="background: linear-gradient(135deg, #ef476f 0%, #d00000 100%); color: white; border: none; border-radius: 12px; padding: 12px 28px; font-weight: 600;">
+                    <i class="fas fa-cash-register me-2"></i>Processar Pagamentos
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-rocket me-2" style="color: var(--primary-color);"></i>
+                    Acesso Rápido
+                </h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a asp-page="/Alunos/Create" class="btn btn-outline-primary w-100 py-3 mb-3" style="border-radius: 12px; border-width: 2px;">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            Novo Aluno
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a asp-page="/Turmas/Create" class="btn btn-outline-success w-100 py-3 mb-3" style="border-radius: 12px; border-width: 2px;">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            Nova Turma
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a asp-page="/Matriculas/Create" class="btn btn-outline-warning w-100 py-3 mb-3" style="border-radius: 12px; border-width: 2px;">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            Nova Matrícula
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a asp-page="/Index" class="btn btn-outline-secondary w-100 py-3 mb-3" style="border-radius: 12px; border-width: 2px;">
+                            <i class="fas fa-chart-bar me-2"></i>
+                            Estatísticas
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
