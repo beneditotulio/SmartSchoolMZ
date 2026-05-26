@@ -38,6 +38,17 @@ public class EncarregadoConfiguration : IEntityTypeConfiguration<Encarregado>
     }
 }
 
+public class ClasseConfiguration : IEntityTypeConfiguration<Classe>
+{
+    public void Configure(EntityTypeBuilder<Classe> builder)
+    {
+        builder.HasKey(c => c.Id);
+        builder.Property(c => c.Nome).IsRequired().HasMaxLength(50);
+        builder.Property(c => c.Nivel).IsRequired().HasMaxLength(50);
+        builder.Property(c => c.ValorMensalidade).HasPrecision(18, 2);
+    }
+}
+
 public class MatriculaConfiguration : IEntityTypeConfiguration<Matricula>
 {
     public void Configure(EntityTypeBuilder<Matricula> builder)

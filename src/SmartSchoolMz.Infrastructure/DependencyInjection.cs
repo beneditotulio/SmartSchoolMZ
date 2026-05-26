@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -19,8 +20,11 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
         services.AddDbContext<ApplicationDbContext>(options =>
+        {
             options.UseSqlServer(connectionString,
-                b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+                b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName));
+            options.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
+        });
 
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         return services;
