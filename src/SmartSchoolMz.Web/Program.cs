@@ -1,3 +1,4 @@
+using System.IO;
 using SmartSchoolMz.Infrastructure;
 using SmartSchoolMz.Infrastructure.Persistence;
 using SmartSchoolMz.Application;
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddAntiforgery(options => options.SuppressXFrameOptionsHeader = true);
 builder.Services.AddInfrastructureWeb(builder.Configuration);
 builder.Services.AddApplication();
 

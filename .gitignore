@@ -109,3 +109,6 @@ Desktop.ini
 # User appsettings
 appsettings.Development.json
 appsettings.Local.json
+
+# Data Protection Keys
+Keys/
