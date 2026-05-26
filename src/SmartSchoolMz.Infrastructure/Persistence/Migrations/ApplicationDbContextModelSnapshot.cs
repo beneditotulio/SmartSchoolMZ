@@ -747,7 +747,7 @@ namespace SmartSchoolMz.Infrastructure.Persistence.Migrations
                     b.HasOne("SmartSchoolMz.Domain.Entities.Classe", "Classe")
                         .WithMany("Disciplinas")
                         .HasForeignKey("ClasseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Classe");
@@ -769,19 +769,19 @@ namespace SmartSchoolMz.Infrastructure.Persistence.Migrations
                     b.HasOne("SmartSchoolMz.Domain.Entities.Aluno", "Aluno")
                         .WithMany("Matriculas")
                         .HasForeignKey("AlunoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartSchoolMz.Domain.Entities.AnoLetivo", "AnoLetivo")
                         .WithMany("Matriculas")
                         .HasForeignKey("AnoLetivoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartSchoolMz.Domain.Entities.Turma", "Turma")
                         .WithMany("Matriculas")
                         .HasForeignKey("TurmaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Aluno");
@@ -826,19 +826,19 @@ namespace SmartSchoolMz.Infrastructure.Persistence.Migrations
                     b.HasOne("SmartSchoolMz.Domain.Entities.Disciplina", "Disciplina")
                         .WithMany("ProfessorTurmaDisciplinas")
                         .HasForeignKey("DisciplinaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartSchoolMz.Domain.Entities.Professor", "Professor")
                         .WithMany("ProfessorTurmaDisciplinas")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartSchoolMz.Domain.Entities.Turma", "Turma")
                         .WithMany("ProfessorTurmaDisciplinas")
                         .HasForeignKey("TurmaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Disciplina");
@@ -853,13 +853,13 @@ namespace SmartSchoolMz.Infrastructure.Persistence.Migrations
                     b.HasOne("SmartSchoolMz.Domain.Entities.AnoLetivo", "AnoLetivo")
                         .WithMany("Turmas")
                         .HasForeignKey("AnoLetivoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartSchoolMz.Domain.Entities.Classe", "Classe")
                         .WithMany("Turmas")
                         .HasForeignKey("ClasseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("AnoLetivo");
