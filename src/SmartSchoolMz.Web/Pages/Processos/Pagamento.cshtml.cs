@@ -26,7 +26,15 @@ public class PagamentoModel : PageModel
         Matricula = await _matriculaService.GetByIdAsync(id);
         if (Matricula == null) return NotFound();
 
-        Input = new CreatePagamentoDto(id, DateTime.Now.ToString("MMMM"), DateTime.Now.Year, 0, Domain.Enums.MetodoPagamento.Numerario, null);
+        Input = new CreatePagamentoDto
+        {
+            MatriculaId = id,
+            Mes = DateTime.Now.ToString("MMMM"),
+            Ano = DateTime.Now.Year,
+            ValorPago = 0,
+            Metodo = Domain.Enums.MetodoPagamento.Numerario,
+            Referencia = null
+        };
         return Page();
     }
 

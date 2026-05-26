@@ -19,9 +19,18 @@ public class CreateModel : PageModel
 
     public void OnGet()
     {
-        Input = new CreateAlunoDto(
-            "", DateTime.Today.AddYears(-6), Domain.Enums.Sexo.Masculino, "", "", "", "", null, DateTime.Today
-        );
+        Input = new CreateAlunoDto
+        {
+            NomeCompleto = "",
+            DataNascimento = DateTime.Today.AddYears(-6),
+            Sexo = Domain.Enums.Sexo.Masculino,
+            DocumentoIdentificacao = "",
+            NumeroMatricula = "",
+            Morada = "",
+            Contacto = "",
+            Email = null,
+            DataIngresso = DateTime.Today
+        };
     }
 
     public async Task<IActionResult> OnPostAsync()

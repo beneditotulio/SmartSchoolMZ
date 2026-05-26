@@ -9,11 +9,12 @@ public record TurmaDto(
     int Ano
 );
 
-public record CreateTurmaDto(
-    string Nome,
-    Guid ClasseId,
-    Guid AnoLetivoId
-);
+public class CreateTurmaDto
+{
+    public string Nome { get; set; } = string.Empty;
+    public Guid ClasseId { get; set; }
+    public Guid AnoLetivoId { get; set; }
+}
 
 public record UpdateTurmaDto(
     string Nome

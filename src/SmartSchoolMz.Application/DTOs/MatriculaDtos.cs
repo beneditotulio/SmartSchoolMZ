@@ -14,11 +14,12 @@ public record MatriculaDto(
     EstadoMatricula Estado
 );
 
-public record CreateMatriculaDto(
-    Guid AlunoId,
-    Guid TurmaId,
-    Guid AnoLetivoId
-);
+public class CreateMatriculaDto
+{
+    public Guid AlunoId { get; set; }
+    public Guid TurmaId { get; set; }
+    public Guid AnoLetivoId { get; set; }
+}
 
 public record UpdateMatriculaEstadoDto(
     EstadoMatricula Estado
