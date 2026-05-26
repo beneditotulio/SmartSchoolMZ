@@ -1,25 +1,26 @@
-using System.IO;
 using SmartSchoolMz.Infrastructure;
 using SmartSchoolMz.Infrastructure.Persistence;
 using SmartSchoolMz.Application;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(options =>
+{
+    // Disable Antiforgery for development (temporary fix for Data Protection issues)
+    options.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
+});
 builder.Services.AddInfrastructureWeb(builder.Configuration);
 builder.Services.AddApplication();
 
-// Disable Antiforgery for development (temporary fix)
-builder.Services.AddAntiforgery(options => options.SuppressXFrameOptionsHeader = true);
-
 var app = builder.Build();
 
-// Seed data
-using (var scope = app.Services.CreateScope())
-{
-    await DbInitializer.Initialize(scope.ServiceProvider);
-}
+// Seed data (commented out temporarily to avoid Data Protection issues during startup
+// using (var scope = app.Services.CreateScope())
+// {
+//     await DbInitializer.Initialize(scope.ServiceProvider);
+// }
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -11,42 +11,46 @@
     <div class="col-md-6">
         <form method="post">
             <div class="mb-3">
-                <label asp-for="Input.NomeCompleto" class="form-label">Nome Completo</label>
-                <input asp-for="Input.NomeCompleto" class="form-control" />
-                <span asp-validation-for="Input.NomeCompleto" class="text-danger"></span>
+                <label for="Input_NomeCompleto" class="form-label">Nome Completo</label>
+                <input id="Input_NomeCompleto" name="Input.NomeCompleto" class="form-control" value="@Model.Input.NomeCompleto" />
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <label asp-for="Input.DataNascimento" class="form-label">Data de Nascimento</label>
-                    <input asp-for="Input.DataNascimento" type="date" class="form-control" />
+                    <label for="Input_DataNascimento" class="form-label">Data de Nascimento</label>
+                    <input id="Input_DataNascimento" name="Input.DataNascimento" type="date" class="form-control" value="@Model.Input.DataNascimento.ToString("yyyy-MM-dd")" />
                 </div>
                 <div class="col">
-                    <label asp-for="Input.Sexo" class="form-label">Sexo</label>
-                    <select asp-for="Input.Sexo" class="form-select" asp-items="Html.GetEnumSelectList<SmartSchoolMz.Domain.Enums.Sexo>()"></select>
+                    <label for="Input_Sexo" class="form-label">Sexo</label>
+                    <select id="Input_Sexo" name="Input.Sexo" class="form-select">
+                        @foreach (var value in Enum.GetValues(typeof(SmartSchoolMz.Domain.Enums.Sexo)))
+                        {
+                            <option value="@((int)value)" selected="@(Model.Input.Sexo == (SmartSchoolMz.Domain.Enums.Sexo)value)">@value</option>
+                        }
+                    </select>
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <label asp-for="Input.DocumentoIdentificacao" class="form-label">Documento ID</label>
-                    <input asp-for="Input.DocumentoIdentificacao" class="form-control" />
+                    <label for="Input_DocumentoIdentificacao" class="form-label">Documento ID</label>
+                    <input id="Input_DocumentoIdentificacao" name="Input.DocumentoIdentificacao" class="form-control" value="@Model.Input.DocumentoIdentificacao" />
                 </div>
                 <div class="col">
-                    <label asp-for="Input.NumeroMatricula" class="form-label">Nº Matrícula</label>
-                    <input asp-for="Input.NumeroMatricula" class="form-control" />
+                    <label for="Input_NumeroMatricula" class="form-label">Nº Matrícula</label>
+                    <input id="Input_NumeroMatricula" name="Input.NumeroMatricula" class="form-control" value="@Model.Input.NumeroMatricula" />
                 </div>
             </div>
             <div class="mb-3">
-                <label asp-for="Input.Morada" class="form-label">Morada</label>
-                <input asp-for="Input.Morada" class="form-control" />
+                <label for="Input_Morada" class="form-label">Morada</label>
+                <input id="Input_Morada" name="Input.Morada" class="form-control" value="@Model.Input.Morada" />
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <label asp-for="Input.Contacto" class="form-label">Contacto</label>
-                    <input asp-for="Input.Contacto" class="form-control" />
+                    <label for="Input_Contacto" class="form-label">Contacto</label>
+                    <input id="Input_Contacto" name="Input.Contacto" class="form-control" value="@Model.Input.Contacto" />
                 </div>
                 <div class="col">
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <input asp-for="Input.Email" type="email" class="form-control" />
+                    <label for="Input_Email" class="form-label">Email</label>
+                    <input id="Input_Email" name="Input.Email" type="email" class="form-control" value="@Model.Input.Email" />
                 </div>
             </div>
             <div class="mb-3">
@@ -57,6 +61,3 @@
     </div>
 </div>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
