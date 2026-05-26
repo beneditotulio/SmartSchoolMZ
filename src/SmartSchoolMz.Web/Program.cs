@@ -7,9 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddAntiforgery(options => options.SuppressXFrameOptionsHeader = true);
 builder.Services.AddInfrastructureWeb(builder.Configuration);
 builder.Services.AddApplication();
+
+// Disable Antiforgery for development (temporary fix)
+builder.Services.AddAntiforgery(options => options.SuppressXFrameOptionsHeader = true);
 
 var app = builder.Build();
 
