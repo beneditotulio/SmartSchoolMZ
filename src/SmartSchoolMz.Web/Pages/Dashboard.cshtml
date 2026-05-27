@@ -1,0 +1,26 @@
+@page
+@model DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+    var role = HttpContext.Session.GetString("UserRole") ?? "Admin";
+}
+
+@{
+    if (role == "Admin")
+    {
+        <partial name="_AdminDashboard" />
+    }
+    else if (role == "Professor")
+    {
+        <partial name="_ProfessorDashboard" />
+    }
+    else if (role == "Encarregado")
+    {
+        <partial name="_EncarregadoDashboard" />
+    }
+    else if (role == "Aluno")
+    {
+        <partial name="_AlunoDashboard" />
+    }
+}
+

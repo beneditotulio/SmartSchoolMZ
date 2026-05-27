@@ -5,6 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add session support
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(2);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 // Add services to the container.
 builder.Services.AddRazorPages(options =>
 {
@@ -15,6 +23,9 @@ builder.Services.AddInfrastructureWeb(builder.Configuration);
 builder.Services.AddApplication();
 
 var app = builder.Build();
+
+// Use session
+app.UseSession();
 
 // Seed data (commented out temporarily to avoid Data Protection issues during startup
 // using (var scope = app.Services.CreateScope())

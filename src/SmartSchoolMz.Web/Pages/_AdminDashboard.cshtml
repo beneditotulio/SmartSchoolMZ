@@ -1,0 +1,161 @@
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h1 class="page-title">
+                <i class="fas fa-crown me-3" style="color: var(--primary-color);"></i>
+                Painel do Administrador
+            </h1>
+            <p class="page-subtitle mb-0">
+                Gestão total do sistema SmartSchoolMz
+            </p>
+        </div>
+        <div class="col-auto">
+            <a asp-page="/Login" class="btn btn-outline-secondary">
+                <i class="fas fa-exchange-alt me-2"></i>Mudar Perfil
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);">
+                <div class="card-icon"><i class="fas fa-users text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="card-title mb-0">Alunos</h5>
+                    <span class="badge bg-primary rounded-pill">247</span>
+                </div>
+                <p class="card-text">Cadastrados no sistema</p>
+                <a asp-page="/Alunos/Index" class="btn btn-sm btn-primary-custom text-white">
+                    <i class="fas fa-eye me-1"></i>Gerir
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%);">
+                <div class="card-icon"><i class="fas fa-chalkboard-teacher text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="card-title mb-0">Professores</h5>
+                    <span class="badge bg-success rounded-pill">18</span>
+                </div>
+                <p class="card-text">Activos na instituição</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%); color: white; border: none;">
+                    <i class="fas fa-eye me-1"></i>Gerir
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%);">
+                <div class="card-icon"><i class="fas fa-door-open text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="card-title mb-0">Turmas</h5>
+                    <span class="badge bg-warning rounded-pill">24</span>
+                </div>
+                <p class="card-text">Organizadas por classe</p>
+                <a asp-page="/Turmas/Index" class="btn btn-sm" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%); color: #1d3557; border: none;">
+                    <i class="fas fa-eye me-1"></i>Gerir
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ef476f 0%, #d00000 100%);">
+                <div class="card-icon"><i class="fas fa-money-bill-wave text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="card-title mb-0">Receita</h5>
+                    <span class="badge bg-danger rounded-pill">MZ 1,245,000</span>
+                </div>
+                <p class="card-text">Mensalidades pagas</p>
+                <a asp-page="/Matriculas/Index" class="btn btn-sm" style="background: linear-gradient(135deg, #ef476f 0%, #d00000 100%); color: white; border: none;">
+                    <i class="fas fa-chart-bar me-1"></i>Ver
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-8">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-chart-line me-2" style="color: var(--primary-color);"></i>
+                    Matrículas por Classe
+                </h4>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead style="background: #f8f9fa;">
+                            <tr>
+                                <th>Classe</th>
+                                <th>Turmas</th>
+                                <th>Alunos</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>10ª Classe</strong></td>
+                                <td>6</td>
+                                <td>72</td>
+                                <td><span class="badge bg-success">Cheia</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>11ª Classe</strong></td>
+                                <td>5</td>
+                                <td>58</td>
+                                <td><span class="badge bg-warning">Vagas</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>12ª Classe</strong></td>
+                                <td>4</td>
+                                <td>45</td>
+                                <td><span class="badge bg-info">Novas</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-bell me-2" style="color: var(--danger-color);"></i>
+                    Avisos
+                </h4>
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex align-items-center">
+                        <i class="fas fa-exclamation-triangle text-warning me-3"></i>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">12 Mensalidades em atraso</h6>
+                            <small class="text-muted">Última atualização: Hoje</small>
+                        </div>
+                    </div>
+                    <div class="list-group-item d-flex align-items-center">
+                        <i class="fas fa-check-circle text-success me-3"></i>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">Ano lectivo 2026 activo</h6>
+                            <small class="text-muted">Início: 01/02/2026</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

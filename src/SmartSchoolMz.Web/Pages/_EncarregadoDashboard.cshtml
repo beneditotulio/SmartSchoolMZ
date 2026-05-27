@@ -1,0 +1,181 @@
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h1 class="page-title">
+                <i class="fas fa-user-tie me-3" style="color: #ffd166;"></i>
+                Painel do Encarregado
+            </h1>
+            <p class="page-subtitle mb-0">
+                João Manuel Mabasso - Encarregado de Educação
+            </p>
+        </div>
+        <div class="col-auto">
+            <a asp-page="/Login" class="btn btn-outline-secondary">
+                <i class="fas fa-exchange-alt me-2"></i>Mudar Perfil
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+    <div class="card-body p-4">
+        <div class="row align-items-center">
+            <div class="col-auto" style="width: 80px; height: 80px; background: linear-gradient(135deg, #4361ee, #3a0ca3); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-user-graduate text-white" style="font-size: 2rem;"></i>
+            </div>
+            <div class="col">
+                <h3 class="mb-1" style="font-weight: 700; color: var(--dark-color);">Maria da Silva Mabasso</h3>
+                <p class="mb-0 text-muted">12ª Classe A | Número: 2026054</p>
+            </div>
+            <div class="col-auto">
+                <span class="badge bg-success" style="font-size: 1rem; padding: 8px 16px;">
+                    <i class="fas fa-check-circle me-1"></i>Matrícula Activa
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%);">
+                <div class="card-icon"><i class="fas fa-graduation-cap text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Desempenho Académico</h5>
+                <p class="card-text">Notas e médias</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%); color: white; border: none;">
+                    Ver Notas
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);">
+                <div class="card-icon"><i class="fas fa-calendar-check text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Frequência</h5>
+                <p class="card-text">Presenças e faltas</p>
+                <button class="btn btn-sm btn-primary-custom text-white">
+                    Ver Frequência
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ef476f 0%, #d00000 100%);">
+                <div class="card-icon"><i class="fas fa-credit-card text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Pagamentos</h5>
+                <p class="card-text">Estado das mensalidades</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #ef476f 0%, #d00000 100%); color: white; border: none;">
+                    Ver Pagamentos
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%);">
+                <div class="card-icon"><i class="fas fa-file-invoice text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Histórico</h5>
+                <p class="card-text">Comprovativos e relatórios</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%); color: #1d3557; border: none;">
+                    Ver Histórico
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-6">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-chart-line me-2" style="color: var(--success-color);"></i>
+                    Média Geral
+                </h4>
+                <div class="text-center mb-4">
+                    <div class="display-3" style="color: var(--success-color); font-weight: 800;">15.8</div>
+                    <div class="text-muted">Média do Trimestre</div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th class="text-center">Nota</th>
+                                <th class="text-center">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Matemática</td>
+                                <td class="text-center"><strong>16.5</strong></td>
+                                <td class="text-center"><span class="badge bg-success">Excelente</span></td>
+                            </tr>
+                            <tr>
+                                <td>Português</td>
+                                <td class="text-center"><strong>14.2</strong></td>
+                                <td class="text-center"><span class="badge bg-info">Bom</span></td>
+                            </tr>
+                            <tr>
+                                <td>Física</td>
+                                <td class="text-center"><strong>13.8</strong></td>
+                                <td class="text-center"><span class="badge bg-info">Bom</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-money-bill-wave me-2" style="color: var(--danger-color);"></i>
+                    Estado dos Pagamentos
+                </h4>
+                <div class="row mb-4">
+                    <div class="col text-center">
+                        <div class="display-5" style="color: var(--success-color); font-weight: 800;">3/4</div>
+                        <div class="text-muted">Pagamentos</div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="display-5" style="color: var(--primary-color); font-weight: 800;">MZ 7,500</div>
+                        <div class="text-muted">Total Pago</div>
+                    </div>
+                </div>
+                <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-0">Março 2026</h6>
+                            <small class="text-muted">MZ 2,500</small>
+                        </div>
+                        <span class="badge bg-success"><i class="fas fa-check me-1"></i>Pago</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-0">Abril 2026</h6>
+                            <small class="text-muted">MZ 2,500</small>
+                        </div>
+                        <span class="badge bg-warning text-dark"><i class="fas fa-clock me-1"></i>Pendente</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary-custom w-100 mt-3">
+                    <i class="fas fa-credit-card me-2"></i>Efectuar Pagamento
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

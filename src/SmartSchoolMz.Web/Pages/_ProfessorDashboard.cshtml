@@ -1,0 +1,138 @@
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h1 class="page-title">
+                <i class="fas fa-chalkboard-teacher me-3" style="color: #06d6a0;"></i>
+                Painel do Professor
+            </h1>
+            <p class="page-subtitle mb-0">
+                Prof. Carlos Alberto Silva - Matemática e Física
+            </p>
+        </div>
+        <div class="col-auto">
+            <a asp-page="/Login" class="btn btn-outline-secondary">
+                <i class="fas fa-exchange-alt me-2"></i>Mudar Perfil
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%);">
+                <div class="card-icon"><i class="fas fa-door-open text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Turmas Atribuídas</h5>
+                <p class="card-text">4 turmas este trimestre</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #06d6a0 0%, #05a77d 100%); color: white; border: none;">
+                    Ver Turmas
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);">
+                <div class="card-icon"><i class="fas fa-star text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Notas Pendentes</h5>
+                <p class="card-text">18 avaliações por lançar</p>
+                <button class="btn btn-sm btn-primary-custom text-white">
+                    Lançar Notas
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%);">
+                <div class="card-icon"><i class="fas fa-calendar-check text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Frequência</h5>
+                <p class="card-text">Registar hoje</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #ffd166 0%, #fca311 100%); color: #1d3557; border: none;">
+                    Registar Presença
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="dashboard-card">
+            <div class="card-header" style="background: linear-gradient(135deg, #7209b7 0%, #3a0ca3 100%);">
+                <div class="card-icon"><i class="fas fa-users text-white"></i></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Total Alunos</h5>
+                <p class="card-text">98 alunos nas minhas turmas</p>
+                <button class="btn btn-sm" style="background: linear-gradient(135deg, #7209b7 0%, #3a0ca3 100%); color: white; border: none;">
+                    Ver Alunos
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-lg-6">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-list-ol me-2" style="color: var(--primary-color);"></i>
+                    Próximas Aulas
+                </h4>
+                <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">10ª Classe A - Matemática</h6>
+                            <small class="text-muted">Hoje, 08:00 - 09:30</small>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">Agora</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">11ª Classe B - Física</h6>
+                            <small class="text-muted">Hoje, 10:00 - 11:30</small>
+                        </div>
+                        <span class="badge bg-secondary rounded-pill">Próxima</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card" style="border: none; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div class="card-body p-4">
+                <h4 class="mb-4" style="font-weight: 700; color: var(--dark-color);">
+                    <i class="fas fa-chart-bar me-2" style="color: var(--success-color);"></i>
+                    Desempenho - 10ª A
+                </h4>
+                <div class="text-center mb-4">
+                    <div class="display-4" style="color: var(--success-color); font-weight: 800;">14.2</div>
+                    <div class="text-muted">Média da Turma</div>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-success" style="width: 71%;"></div>
+                </div>
+                <div class="row mt-3 text-center">
+                    <div class="col">
+                        <div class="h5 mb-0" style="color: var(--success-color);">18</div>
+                        <small class="text-muted">Aprovados</small>
+                    </div>
+                    <div class="col">
+                        <div class="h5 mb-0" style="color: var(--warning-color);">5</div>
+                        <small class="text-muted">Recuperação</small>
+                    </div>
+                    <div class="col">
+                        <div class="h5 mb-0" style="color: var(--danger-color);">2</div>
+                        <small class="text-muted">Reprovados</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
