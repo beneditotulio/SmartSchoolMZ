@@ -141,12 +141,13 @@
 </head>
 <body>
     @{
-        var role = Context.Session.GetString("UserRole") ?? "Admin";
+        var role = Context.Session.GetString("UserRole");
+        var username = Context.Session.GetString("Username");
     }
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="@(role == "Admin" ? "/Dashboard" : "/Login")">
+                <a class="navbar-brand" asp-area="" asp-page="@(!string.IsNullOrEmpty(role) ? "/Dashboard" : "/Login")">
                     <i class="fas fa-graduation-cap me-2"></i>
                     SmartSchoolMz
                 </a>
@@ -259,14 +260,27 @@
                             </li>
                         }
                     </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Login">
-                                <i class="fas fa-sign-out-alt me-1"></i>
-                                @(role == "Admin" ? "Sair" : "Mudar Perfil")
-                            </a>
-                        </li>
-                    </ul>
+                    @if (!string.IsNullOrEmpty(role))
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="me-2" style="width: 36px; height: 36px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>@username</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="" asp-page="/Login">
+                                            <i class="fas fa-sign-out-alt me-2"></i>
+                                            Sair
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    }
                 </div>
             </div>
         </nav>
